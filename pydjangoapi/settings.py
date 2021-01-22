@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapi',
+    'rest_framework' # ติดตั้ง rest_framework ตรงนี้
 ]
 
 MIDDLEWARE = [
