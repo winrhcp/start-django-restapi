@@ -37,18 +37,24 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapi',
-    'rest_framework' # ติดตั้ง rest_framework ตรงนี้
+    'myapi', #app
+    'rest_framework', # ติดตั้ง rest_framework ตรงนี้
+    'corsheaders', #Cross-Origin Resource Sharing(CORS)
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware', # new
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000'
 ]
 
 ROOT_URLCONF = 'pydjangoapi.urls'
