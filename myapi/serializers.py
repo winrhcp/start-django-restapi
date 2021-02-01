@@ -10,4 +10,4 @@ class RapperSerializer(serializers.HyperlinkedModelSerializer):
 class StockSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Stock
-        fields = ('name', 'price')
+        fields = ('id', 'name', 'price')
