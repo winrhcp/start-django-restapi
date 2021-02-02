@@ -13,3 +13,7 @@ class RapperViewSet(viewsets.ModelViewSet):
 class StockViewSet(viewsets.ModelViewSet):
     queryset = Stock.objects.all().order_by('name')
     serializer_class = StockSerializer
+
+class StockEditSet(viewsets.ModelViewSet):
+    queryset = Stock.objects.all().order_by('name')
+    serializer_class = StockSerializer
